@@ -103,14 +103,14 @@ async function timeoutUserLinks(userId) {
     );
 }
 
-// Deteccion de palabras prohibidas //
+// Deteccion de palabras prohibidas donde el bot lee los mensajes//
 
 client.on("message", async (channel, tags, message, self) => {
-    if (self) return;
+    if (self) return; // acá el bot evita matarse a si mismo si es que llega a enviar un mensaje baneado //
 
-    const lowerMessage = message.toLowerCase();
+    const lowerMessage = message.toLowerCase(); // convierte el mensaje a minúsculas para facilitar la comparación //
 
-    if (bannedWords.some(word => lowerMessage.includes(word))) {
+    if (bannedWords.some(word => lowerMessage.includes(word))) { // hace la pregunta si alguna palabra que lee es como la almacenada en el array //
         console.log("Palabra inapropiada detectada");
         // prueba en primer intento mostrar en consola a quien le aplica el tome out y mostrar el mensaje //
         try {
