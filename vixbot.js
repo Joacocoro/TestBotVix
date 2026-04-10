@@ -7,7 +7,7 @@ const axios = require("axios"); // hace la peticion por HTTP a la API de twitch 
 
 const BOT_USERNAME = "ranitabot_vix";
 const OAUTH_TOKEN = "oauth:4gkudl1nvk8cpocm6wvh0lvdrc576f";
-const ACCESS_TOKEN = "4gkudl1nvk8cpocm6wvh0lvdrc576f";
+const ACCESS_TOKEN = "4gkudl1nvk8cpocm6wvh0lvdrc576f"; // token de acceso limpio para las funciones //
 const CLIENT_ID = "gp762nuuoqcoxypju8c569th9wz7q5";
 
 // indentidad del cliente que toma el bot para entrar al chat //
