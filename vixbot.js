@@ -2,6 +2,7 @@
 
 const tmi = require("tmi.js"); // hace la conexion con el chat de twitch //
 const axios = require("axios"); // hace la peticion por HTTP a la API de twitch //
+const sql = require("mssql"); //constante con la conexion de SQLServer //
 
 // token donde toma la identidad el bot y nombre para comparar con los tokens //
 
@@ -53,6 +54,19 @@ async function getBotId() {
     }
 }
 
+// conexion sqlserver //
+async function connectDB() {
+    try {
+        await sql.connect(config);
+        console.log("✅ Conectado a SQL Server");
+    } catch (error) {
+        console.log("❌ Error DB:", error.message);
+    }
+}
+
+module.exports = { sql, connectDB };
+
+sql.connect(config) // conexion con la base dataos //
 // conexion del bot y solicitud para obtener el id del bot para utilizarla automaticamente //
 client.connect();
 getBotId();

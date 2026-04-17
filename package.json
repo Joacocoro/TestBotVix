@@ -12,6 +12,7 @@
   "type": "commonjs",
   "dependencies": {
     "axios": "^1.15.0",
+    "mssql": "^12.2.3",
     "tmi.js": "^1.8.5"
   }
 }
